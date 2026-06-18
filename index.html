@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sans Charges</title>
+
+<style>
+body{
+    background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+}
+
+header{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    border-bottom:3px solid cyan;
+}
+
+header h1{
+    color:cyan;
+    margin:0;
+}
+
+nav{
+    background:#222;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+h2{
+    text-align:center;
+    color:cyan;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.charge{
+    background:#111;
+    border:2px solid #333;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.2s;
+}
+
+.charge:hover{
+    transform:scale(1.03);
+    border-color:cyan;
+}
+
+.charge img{
+    width:100%;
+    display:block;
+}
+
+.piadas{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.piada{
+    background:#111;
+    margin:15px 0;
+    padding:15px;
+    border-left:5px solid cyan;
+}
+
+button{
+    background:black;
+    color:white;
+    border:2px solid cyan;
+    padding:10px 20px;
+    cursor:pointer;
+    display:block;
+    margin:20px auto;
+}
+
+#aleatoria{
+    text-align:center;
+    font-size:20px;
+    padding-bottom:30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>💀 SANS CHARGES 💀</h1>
+    <p>Piadas ruins e charges melhores ainda.</p>
+</header>
+
+<nav>
+    <a href="#charges">Charges</a>
+    <a href="#piadas">Piadas</a>
+</nav>
+
+<h2 id="charges">🎨 Charges</h2>
+
+<div class="galeria">
+
+    <div class="charge">
+        <img src="charge1.png">
+    </div>
+
+    <div class="charge">
+        <img src="charge2.png">
+    </div>
+
+    <div class="charge">
+        <img src="charge3.png">
+    </div>
+
+    <div class="charge">
+        <img src="charge4.png">
+    </div>
+
+    <div class="charge">
+        <img src="charge5.png">
+    </div>
+
+    <div class="charge">
+        <img src="charge6.png">
+    </div>
+
+</div>
+
+<h2 id="piadas">😂 Piadas do Sans</h2>
+
+<div class="piadas">
+
+    <div class="piada">
+        O Sans não usa escadas. Ele pega atalhos.
+    </div>
+
+    <div class="piada">
+        Qual o esporte favorito do Sans? BasqueBONE.
+    </div>
+
+    <div class="piada">
+        O Sans tentou trabalhar. Durou 5 minutos.
+    </div>
+
+    <div class="piada">
+        O Sans abriu uma lanchonete. Só vende ketchup.
+    </div>
+
+    <div class="piada">
+        Por que o Sans não se perde? Porque ele sempre conhece um atalho.
+    </div>
+
+</div>
+
+<button onclick="piadaAleatoria()">
+💀 Piada Aleatória
+</button>
+
+<div id="aleatoria">
+Clique no botão.
+</div>
+
+<script>
+const piadas = [
+"O Sans não usa escadas. Ele pega atalhos.",
+"Qual o esporte favorito do Sans? BasqueBONE.",
+"O Sans tentou trabalhar. Durou 5 minutos.",
+"O Sans abriu uma lanchonete. Só vende ketchup.",
+"Por que o Sans não se perde? Porque ele sempre conhece um atalho.",
+"O Sans gosta de dormir. Surpresa para ninguém.",
+"Sans.exe parou de funcionar porque estava cochilando."
+];
+
+function piadaAleatoria(){
+    let sorteio = Math.floor(Math.random() * piadas.length);
+    document.getElementById("aleatoria").innerText = piadas[sorteio];
+}
+</script>
+
+</body>
+</html>
