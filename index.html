@@ -15,6 +15,11 @@ body{
     margin:0;
 }
 
+/* garante que nada “desaparece” */
+main{
+    min-height:100vh;
+}
+
 header{
     background:#111;
     text-align:center;
@@ -99,3 +104,89 @@ button{
 }
 </style>
 </head>
+
+<body>
+
+<main>
+
+<header>
+    <h1>💀 SANS CHARGES 💀</h1>
+    <p>Piadas ruins e charges melhores ainda.</p>
+</header>
+
+<nav>
+    <a href="#charges">Charges</a>
+    <a href="#piadas">Piadas</a>
+</nav>
+
+<h2 id="charges">🎨 Charges</h2>
+
+<div class="galeria">
+
+    <div class="charge">
+        <img src="charge1.jpg" alt="charge 1">
+    </div>
+
+    <div class="charge">
+        <img src="charge2.jpg" alt="charge 2">
+    </div>
+
+    <div class="charge">
+        <img src="charge3.jpg" alt="charge 3">
+    </div>
+
+    <div class="charge">
+        <img src="charge4.jpg" alt="charge 4">
+    </div>
+
+    <div class="charge">
+        <img src="charge5.jpg" alt="charge 5">
+    </div>
+
+    <div class="charge">
+        <img src="charge6.jpg" alt="charge 6">
+    </div>
+
+</div>
+
+<h2 id="piadas">😂 Piadas do Sans</h2>
+
+<div class="piadas">
+
+    <div class="piada">O Sans não usa escadas. Ele pega atalhos.</div>
+    <div class="piada">Qual o esporte favorito do Sans? BasqueBONE.</div>
+    <div class="piada">O Sans tentou trabalhar. Durou 5 minutos.</div>
+    <div class="piada">O Sans abriu uma lanchonete. Só vende ketchup.</div>
+    <div class="piada">Por que o Sans não se perde? Porque ele sempre conhece um atalho.</div>
+
+</div>
+
+<button onclick="piadaAleatoria()">
+💀 Piada Aleatória
+</button>
+
+<div id="aleatoria">
+Clique no botão.
+</div>
+
+</main>
+
+<script>
+const piadas = [
+"O Sans não usa escadas. Ele pega atalhos.",
+"Qual o esporte favorito do Sans? BasqueBONE.",
+"O Sans tentou trabalhar. Durou 5 minutos.",
+"O Sans abriu uma lanchonete. Só vende ketchup.",
+"Por que o Sans não se perde? Porque ele sempre conhece um atalho.",
+"O Sans gosta de dormir. Surpresa para ninguém.",
+"Sans.exe parou de funcionar porque estava cochilando."
+];
+
+function piadaAleatoria(){
+    let sorteio = Math.floor(Math.random() * piadas.length);
+    document.getElementById("aleatoria").innerText = piadas[sorteio];
+}
+</script>
+
+</body>
+</html>
